@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{layouts/_layout.admin}">
+<head>
+    <title layout:title-pattern="$LAYOUT_TITLE - $CONTENT_TITLE">Content page</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous"/>
+    <style>
+        body {
+            padding-top: 80px;
+        }
+    </style>
+    <script type="text/javascript" th:src="${urls.getForLookupPath('/dist/js/classroom.app.js')}"></script>
+</head>
+<body>
+<div layout:fragment="content">
+    <p>And this is content from content page.</p>
+</div>
+<footer layout:fragment="footer">
+    <p>This footer will be ignored, as no placeholder for 'footer' layout fragment was prepared in layout template. </p>
+</footer>
+</body>
+</html>

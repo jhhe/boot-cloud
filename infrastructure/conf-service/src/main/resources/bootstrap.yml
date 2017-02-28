@@ -1,0 +1,12 @@
+server:
+  port: 15100
+spring:
+  application:
+    name: configserver
+  profiles:
+    active: {spring.profiles.active}
+  cloud:
+    config:
+      server:
+        git:
+          uri: http://gitlab.gaoxiaobang.com/zygj/huike-eaas-config.git

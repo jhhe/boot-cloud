@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: user-service
+  profiles:
+    active: {spring.profiles.active}
+  cloud:
+    config:
+      uri: http://configserver:15100
+encrypt:
+  failOnError: false
