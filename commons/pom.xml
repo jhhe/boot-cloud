@@ -12,5 +12,5 @@
     </parent>
     <packaging>jar</packaging>
     <artifactId>commons</artifactId>
-    <name>huike-eaas-commons</name>
+    <name>kkb-commons</name>
 </project>
