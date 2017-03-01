@@ -2,7 +2,7 @@ server:
   port: 15100
 spring:
   application:
-    name: configserver
+    name: config
   profiles:
     active: {spring.profiles.active}
   cloud:
@@ -10,3 +10,13 @@ spring:
       server:
         git:
           uri: http://gitlab.gaoxiaobang.com/kkb-team/kkb-config.git
+          username: nhsun@gaoxiaobang.com
+          password: xhg121988
+  eureka:
+    instance:
+      hostname: configserver
+    client:
+      registerWithEureka: true
+      fetchRegistry: false
+      serviceUrl:
+        defaultZone: http://discovery:15200/eureka/
