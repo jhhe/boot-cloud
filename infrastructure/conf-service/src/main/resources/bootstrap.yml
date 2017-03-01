@@ -9,4 +9,4 @@ spring:
     config:
       server:
         git:
-          uri: http://gitlab.gaoxiaobang.com/zygj/huike-eaas-config.git
+          uri: http://gitlab.gaoxiaobang.com/kkb-team/kkb-config.git
