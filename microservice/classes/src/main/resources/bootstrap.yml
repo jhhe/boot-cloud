@@ -6,5 +6,25 @@ spring:
   cloud:
     config:
       uri: http://configserver:15100
+  datasource:
+    name: gxb_core
+    url: jdbc:mysql://101.200.173.244:3306/gxb_core?useUnicode=true&characterEncoding=UTF-8
+    username: rd
+    password: 0Crofg6WIDslONnmqgQLWv14Ekb6028G
+    driver-class-name: com.mysql.jdbc.Driver
+  secondDatasource:
+    write:
+      name: kaikeba
+      url: jdbc:mysql://172.16.127.201:3306/kaikeba?useUnicode=true&characterEncoding=UTF-8
+      username: test
+      password: Meihao100@bfbd
+      driver-class-name: com.mysql.jdbc.Driver
+    read1:
+      name: kaikeba
+      url: jdbc:mysql://172.16.127.201:3306/kaikeba?useUnicode=true&characterEncoding=UTF-8
+      username: test
+      password: Meihao100@bfbd
+      driver-class-name: com.mysql.jdbc.Driver
+
 encrypt:
   failOnError: false
