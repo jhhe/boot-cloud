@@ -20,6 +20,7 @@ import org.springframework.context.annotation.Primary;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 import org.springframework.transaction.PlatformTransactionManager;
+import org.springframework.validation.beanvalidation.MethodValidationPostProcessor;
 
 import javax.sql.DataSource;
 import java.util.HashMap;
@@ -138,6 +139,11 @@ public class Application extends BaseApiApplication {
     @Bean
     public PlatformTransactionManager secondTransactionManager(@Qualifier("secondReadWriteDataSource") DataSource secondDataSource) {
         return new DataSourceTransactionManager(secondDataSource);
+    }
+
+    @Bean
+    public MethodValidationPostProcessor getMethodValidationPostProcessor() {
+        return new MethodValidationPostProcessor();
     }
 
     /**
